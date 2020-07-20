@@ -456,6 +456,7 @@ static uint64_t axidma_read(void *opaque, hwaddr addr,
             s->regs[addr] &= 0xffff;
             s->regs[addr] |= (s->complete_cnt & 0xff) << 16;
             s->regs[addr] |= (ptimer_get_count(s->ptimer) & 0xff) << 24;
+            s->regs[addr] |= 1 << 3;
             r = s->regs[addr];
             break;
         default:

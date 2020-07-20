@@ -314,8 +314,8 @@ static void fdt_init_node(void *args)
     if (all_compats) {
         DB_PRINT_NP(0, "FDT: Unsupported peripheral invalidated - "
                     "compatibilities %s\n", all_compats);
-        qemu_fdt_setprop_string(fdti->fdt, node_path, "compatible",
-                                "invalidated");
+//        qemu_fdt_setprop_string(fdti->fdt, node_path, "compatible",
+//                                "invalidated");
     }
 exit:
 
